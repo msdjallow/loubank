@@ -1,0 +1,40 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Première page */
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+/* Modal (deuxième vue) */
+.card-option {
+  transition: transform 0.2s ease;
+}
+.card-option:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    padding: 1.5rem !important;
+  }
+
+  .card-option {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+/* Flou quand modal est actif */
+body.blurred .container {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
