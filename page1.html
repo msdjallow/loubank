@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Banking App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .balance {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .profile-img, .contact-img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-img {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #fff;
+    }
+
+    .contact-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .quick-transfer {
+      background: linear-gradient(to right, #e0f4ff, #d2ffef);
+      border-radius: 20px;
+    }
+
+    .contact-card {
+      background-color: #2b2b3d;
+      border-radius: 10px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h4>Transfer</h4>
+      <div class="balance">$ 7,896</div>
+    </div>
+
+    <!-- Quick Transfer Section -->
+    <div class="quick-transfer p-3 d-flex flex-wrap justify-content-around align-items-center mb-4 text-dark">
+      <div class="text-center mb-2">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John" class="profile-img mb-1" />
+        <div>John</div>
+      </div>
+      <div class="text-center mb-2">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Jeniffer" class="profile-img mb-1" />
+        <div>Jeniffer</div>
+      </div>
+      <div class="text-center mb-2">
+        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Maya" class="profile-img mb-1" />
+        <div>Maya 👋</div>
+      </div>
+      <div class="text-center mb-2">
+        <button class="btn btn-dark rounded-circle">+</button>
+        <div>Send</div>
+      </div>
+    </div>
+
+    <!-- Contact List -->
+    <div class="d-flex flex-column gap-2">
+      <!-- Contact Item -->
+      <div class="contact-card d-flex justify-content-between align-items-center px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" class="contact-img" alt="">
+          <div>
+            <div class="fw-bold text-white">Jeniffer</div>
+            <small class="text-light">Hi! I return the debt</small>
+          </div>
+        </div>
+        <small class="text-muted">10 Feb</small>
+      </div>
+
+      <div class="contact-card d-flex justify-content-between align-items-center px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" class="contact-img" alt="">
+          <div>
+            <div class="fw-bold text-white">John Baldwin</div>
+            <small class="text-light">Thanks!</small>
+          </div>
+        </div>
+        <small class="text-muted">07 Feb</small>
+      </div>
+
+      <div class="contact-card d-flex justify-content-between align-items-center px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <img src="https://randomuser.me/api/portraits/women/2.jpg" class="contact-img" alt="">
+          <div>
+            <div class="fw-bold text-white">Maya 👋</div>
+            <small class="text-light">Transfer</small>
+          </div>
+        </div>
+        <small class="text-muted">07 Feb</small>
+      </div>
+
+      <div class="contact-card d-flex justify-content-between align-items-center px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" class="contact-img" alt="">
+          <div>
+            <div class="fw-bold text-white">Sister Alice 🌸</div>
+            <small class="text-light">Hi! I return the debt</small>
+          </div>
+        </div>
+        <small class="text-muted">04 Feb</small>
+      </div>
+
+      <div class="contact-card d-flex justify-content-between align-items-center px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <img src="https://randomuser.me/api/portraits/women/4.jpg" class="contact-img" alt="">
+          <div>
+            <div class="fw-bold text-white">Jess</div>
+            <small class="text-light">Hi! I return the debt</small>
+          </div>
+        </div>
+        <small class="text-muted">02 Feb</small>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
