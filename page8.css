@@ -1,0 +1,52 @@
+.bar {
+  width: 10px;
+  background-color: #5b5b5b;
+  border-radius: 5px;
+  margin: 0 auto 5px;
+}
+
+.bar-yellow {
+  background-color: #f9f871;
+}
+
+/* reutilisable */
+.bar {
+  width: 10px;
+  background-color: #5b5b5b;
+  border-radius: 5px;
+  margin: 0 auto 5px;
+}
+
+.bar-yellow {
+  background-color: #f9f871;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.transaction .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.bar {
+  width: 10px;
+  background-color: #5b5b5b;
+  border-radius: 5px;
+  margin: 0 auto 5px;
+}
+
+.bar-yellow {
+  background-color: #f9f871;
+}
