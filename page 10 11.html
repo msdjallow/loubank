@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Messagerie bancaire</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+        :root {
+      --bg-main: #1e1e1e;
+      --bg-surface: #2b2b2b;
+      --bg-chat: #121212;
+      --text-primary: #ffffff;
+      --text-secondary: #b3b3b3;
+      --accent-yellow: #f1fa8c;
+      --accent-green: #50fa7b;
+      --accent-cyan: #8be9fd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+    }
+
+    .sidebar {
+      background-color: var(--bg-surface);
+      width: 80px;
+      height: 100vh;
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .sidebar i {
+      font-size: 1.4rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .sidebar i:hover,
+    .sidebar i.active {
+      color: var(--accent-yellow);
+    }
+
+    .main-content {
+      margin-left: 80px;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .contacts-col {
+      width: 300px;
+      background-color: var(--bg-surface);
+      overflow-y: auto;
+      padding: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .contact-item:hover,
+    .contact-item.active {
+      background-color: var(--accent-yellow);
+      color: var(--bg-main);
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .chat-area {
+      flex: 1;
+      background-color: var(--bg-chat);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      overflow: hidden;
+    }
+
+    #chatWindow {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    .message {
+      max-width: 70%;
+      margin: 5px 0;
+      padding: 10px 15px;
+      border-radius: 12px;
+    }
+
+    .user1 {
+      background-color: var(--accent-yellow);
+      color: var(--bg-main);
+      align-self: flex-end;
+    }
+
+    .user2 {
+      background-color: #cde9ff;
+      color: #000;
+      align-self: flex-start;
+    }
+
+    #inputArea {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    #messageInput {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    #sendBtn {
+      padding: 0 20px;
+      border-radius: 8px;
+      background-color: var(--accent-yellow);
+      border: none;
+      color: var(--bg-main);
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        flex-direction: column;
+        width: 60px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 60px;
+        flex-direction: column;
+      }
+
+      .contacts-col {
+        display: none;
+      }
+
+      .chat-area {
+        flex: 1;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <i class="bi bi-star-fill active" title="Actions"></i>
+    <i class="bi bi-chat-left-text" title="Channels"></i>
+    <i class="bi bi-postcard" title="Postcards"></i>
+    <i class="bi bi-currency-exchange" title="Transfer Money"></i>
+    <i class="bi bi-box-seam" title="Lou Bonuses"></i>
+    <i class="bi bi-bank" title="Lou Assets"></i>
+  </div>
+
+  <div class="main-content">
+    <div class="contacts-col">
+      <h5 class="mb-3">Messages</h5>
+      <div class="contact-item" data-user="LouBank">
+        <img src="images.jpeg" class="avatar" />
+        <div>
+          <strong>LouBank</strong><br /><small>Updates: Find out what’s new</small>
+        </div>
+      </div>
+      <div class="contact-item" data-user="Jeniffer">
+        <img src="WhatsApp Image 2025-06-23 à 02.50.09_e354bdf1.jpg" class="avatar" />
+        <div>
+          <strong>Jeniffer</strong><br /><small>Hi! I return the debt</small>
+        </div>
+      </div>
+      <div class="contact-item" data-user="John Baldwin">
+        <img src="WhatsApp Image 2025-06-23 à 02.50.06_f9376acf.jpg" class="avatar" />
+        <div>
+          <strong>John Baldwin</strong><br /><small>Thanks!</small>
+        </div>
+      </div>
+      <div class="contact-item" data-user="Maya">
+        <img src="WhatsApp Image 2025-06-13 à 16.02.42_864e9f19.jpg" class="avatar" />
+        <div>
+          <strong>Maya</strong><br /><small>Transfer</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-area">
+      <h5 id="chatWith">Sélectionne un contact</h5>
+      <div id="chatWindow" class="d-flex flex-column"></div>
+      <div id="inputArea" style="display:none">
+        <input id="messageInput" placeholder="Message" />
+        <button id="sendBtn">Envoyer</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contacts = document.querySelectorAll('.contact-item');
+      const chatWindow = document.getElementById('chatWindow');
+      const inputArea = document.getElementById('inputArea');
+      const messageInput = document.getElementById('messageInput');
+      const sendBtn = document.getElementById('sendBtn');
+      const chatWith = document.getElementById('chatWith');
+      const history = {};
+      let selectedContact = null;
+
+      function appendMessage(cls, text) {
+        const msg = document.createElement('div');
+        msg.className = `message ${cls}`;
+        msg.textContent = text;
+        chatWindow.appendChild(msg);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+        if (selectedContact) history[selectedContact].push(msg);
+      }
+
+      contacts.forEach(item => {
+        const user = item.dataset.user;
+        history[user] = [];
+        item.addEventListener('click', () => {
+          selectedContact = user;
+          contacts.forEach(c => c.classList.remove('active'));
+          item.classList.add('active');
+
+          chatWith.textContent = 'Discussion avec ' + user;
+          chatWindow.innerHTML = '';
+          history[user].forEach(m => chatWindow.appendChild(m));
+          inputArea.style.display = 'flex';
+
+          setTimeout(() => appendMessage('user2', `Bonjour ${user}, comment puis-je vous aider aujourd’hui ?`), 300);
+        });
+      });
+
+      sendBtn.addEventListener('click', () => {
+        const text = messageInput.value.trim();
+        if (!text || !selectedContact) return;
+        appendMessage('user1', text);
+        messageInput.value = '';
+
+        setTimeout(() => {
+          let response = 'Je suis désolé, je n’ai pas compris.';
+          if (/solde/i.test(text)) response = 'Votre solde est de 1 234 567 FCFA.';
+          else if (/virement/i.test(text)) response = 'Vers quel compte souhaitez-vous transférer ?';
+          else if (/bonjour|salut|coucou|bonsoir/i.test(text)) {
+            const reps = ['Salut ! Comment puis-je vous aider ?', 'Bonjour, que souhaitez-vous faire aujourd’hui ?'];
+            response = reps[Math.floor(Math.random() * reps.length)];
+          }
+          appendMessage('user2', response);
+        }, 700);
+      });
+    });
+
+      </script>
+</body>
+
+</html>
