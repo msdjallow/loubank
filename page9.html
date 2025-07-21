@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boutons simples</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #202020;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      color: #fff;
+    }
+
+    .container-box {
+      max-width: 400px;
+      width: 100%;
+      padding: 2rem;
+      background-color: #2a2a2a;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .logobank {
+      width: 120px;
+      margin: 0 auto 30px auto;
+    }
+
+    .logobank img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .btn-custom {
+      width: 100%;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 14px;
+      margin-bottom: 15px;
+      border: none;
+    }
+
+    .btn-yellow {
+      background-color: #b8bb0c;
+      color: #000;
+    }
+
+    .btn-gray {
+      background-color: #444444;
+      color: #fff;
+    }
+
+    @media (min-width: 768px) {
+      .container-box {
+        padding: 3rem;
+      }
+
+      .btn-custom {
+        font-size: 20px;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-box">
+    <div class="logobank">
+      <img src="WhatsApp Image 2025-07-14 à 13.17.02_c5ed49f3.jpg" alt="logo">
+    </div>
+
+    <button class="btn-custom btn-yellow">Log in</button>
+    <button class="btn-custom btn-gray">Become a client of the bank</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
