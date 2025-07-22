@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Budget</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="page8.css">
+</head>
+
+<body class="bg-dark text-white">
+
+  <div class="container-fluid py-4 px-5">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <button class="btn btn-sm btn-outline-light">&larr;</button>
+      <h4 class="text-center flex-grow-1 mb-0">My budget</h4>
+    </div>
+
+    <!-- Balance Info -->
+    <div class="bg-black rounded p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <h3>$1,345</h3>
+          <small class="text-secondary">September forecast $2,010</small>
+        </div>
+        <small class="text-white-50">June, 2020</small>
+      </div>
+    </div>
+
+    <!-- My Costs -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5>My costs</h5>
+      <button class="btn btn-sm btn-outline-light">Week ▼</button>
+    </div>
+
+    <!-- Graph -->
+    <div class="d-flex justify-content-between align-items-end mb-5" style="height: 150px;">
+      <div class="text-center text-white-50">
+        <div class="bar" style="height: 60px;"></div>
+        <small>Jun 13</small>
+      </div>
+      <div class="text-center text-white-50">
+        <div class="bar" style="height: 70px;"></div>
+        <small>Jun 14</small>
+      </div>
+      <div class="text-center text-warning">
+        <div class="bar bar-yellow" style="height: 80px;"></div>
+        <small>Jun 15</small>
+      </div>
+      <div class="text-center text-white-50">
+        <div class="bar" style="height: 60px;"></div>
+        <small>Jun 16</small>
+      </div>
+      <div class="text-center text-white-50">
+        <div class="bar" style="height: 100px;"></div>
+        <small>Jun 17</small>
+      </div>
+      <div class="text-center text-white-50">
+        <div class="bar" style="height: 75px;"></div>
+        <small>Jun 18</small>
+      </div>
+      <div class="text-center text-white-50">
+        <div class="bar" style="height: 50px;"></div>
+        <small>Jun 19</small>
+      </div>
+    </div>
+
+    <!-- Transactions (en grille 2 par ligne) -->
+<div>
+  <h5 class="mb-4">June 15, 2020</h5>
+
+  <div class="row g-4">
+    <!-- Transaction 1 -->
+    <div class="col-md-6">
+      <div class="bg-black rounded p-3 d-flex justify-content-between align-items-center h-100">
+        <div class="d-flex align-items-center gap-3">
+          <img src="webflow.png" alt="Webflow" width="40" height="40">
+          <div>
+            <strong>Webflow</strong><br>
+            <small class="text-secondary">Outcoming transfer</small>
+          </div>
+        </div>
+        <span class="text-danger fw-bold">- $45</span>
+      </div>
+    </div>
+
+    <!-- Transaction 2 -->
+    <div class="col-md-6">
+      <div class="bg-black rounded p-3 d-flex justify-content-between align-items-center h-100">
+        <div class="d-flex align-items-center gap-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg" alt="Sketch" width="40" height="40">
+          <div>
+            <strong>Sketch</strong><br>
+            <small class="text-secondary">Annual withdrawal</small>
+          </div>
+        </div>
+        <span class="text-danger fw-bold">- $79</span>
+      </div>
+    </div>
+
+    <!-- Transaction 3 -->
+    <div class="col-md-6">
+      <div class="bg-black rounded p-3 d-flex justify-content-between align-items-center h-100">
+        <div class="d-flex align-items-center gap-3">
+          <img src="youtube.png" alt="Youtube" width="40" height="40">
+          <div>
+            <strong>Youtube</strong><br>
+            <small class="text-secondary">Annual withdrawal</small>
+          </div>
+        </div>
+        <span class="text-danger fw-bold">- $15</span>
+      </div>
+    </div>
+
+    <!-- Transaction 4 -->
+    <div class="col-md-6">
+      <div class="bg-black rounded p-3 d-flex justify-content-between align-items-center h-100">
+        <div class="d-flex align-items-center gap-3">
+          <img src="unsh.png" alt="Unsplash" width="40" height="40">
+          <div>
+            <strong>Unsplash</strong><br>
+            <small class="text-secondary">Annual withdrawal</small>
+          </div>
+        </div>
+        <span class="text-danger fw-bold">- $9</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- JavaScript Containers -->
+    <div id="graph-container" class="d-flex justify-content-between align-items-end mb-5" style="height: 150px;"></div>
+    <div id="transaction-list"></div>
+
+  </div>
+
+</body>
+</html>
