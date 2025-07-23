@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LouBank </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      color: #333;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: none;
+      border: 4px solid yellow;
+      box-shadow: 0 0 10px rgba(0, 204, 153, 0.4);
+      transition: transform 0.5s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 span {
+      color: yellow;
+    }
+
+    .demo-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    }
+
+    .demo-btn:hover {
+    background-color: gold;
+    color: black;
+    }
+
+    
+  </style>
+</head>
+
+    <div id="navbar-container"></div>
+
+    <div class="container pt-5 pb-5 mb-5"> <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
+            
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
+            <div class="col">
+                <div class="card card-light-green bg-primary">
+                    <div class="card-body">
+                        <small class="text-muted">VISA</small>
+                        <h5 class="card-title">Salary</h5>
+                        <p class="card-text fw-bold">$ 2,230</p>
+                        <small class="text-muted">** 6917</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-light-yellow bg-warning">
+                    <div class="card-body">
+                        <small class="text-muted">VISA</small>
+                        <h5 class="card-title">Savings account</h5>
+                        <p class="card-text fw-bold">$ 5,566</p>
+                        <small class="text-muted">** 4552</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                </div>
+        </div>
+
+        <h5 class="text-light md-3">FINANCE</h5>
+        <div class="row row-cols-3 g-3 md-4 text-center">
+            <div class="col">
+                <div class="card card-dark p-3 bg-dark muted text-light ">
+                    <i class="fas fa-star fa-2x mb-2 bg-warning w-25 mx-auto"></i>
+                    <small>My bonuses</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-dark p-3 bg-dark muted text-light">
+                    <i class="fas fa-chart-pie fa-2x mb-2 bg-primary w-25 mx-auto"></i>
+                    <small>My budget</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-dark p-3 bg-dark muted text-light">
+                    <i class="fas fa-chart-line fa-2x md-2 bg-secondary w-25 mx-auto"></i>
+                    <small>Finance analysis</small>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="text-light mb-3">CURRENT LOANS</h5>
+        <div class="card card-dark mb-3 bg-dark muted">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2 text-light ">
+                    <div>
+                        <i class="fas fa-clipboard fa-lg me-2 bg-primary"></i>
+                        <span>Account N° 3874825</span>
+                    </div>
+                    <span>$ 78,92</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-secondary muted">Expires 12/22/2023</small>
+                    <small class="text-secondary muted">Rate 3.5%</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-info d-flex align-items-center justify-content-between md-4 p-3" role="alert" style="background-color: rgb(55, 55, 230); border-color: rgb(55, 55, 230) ; color: white;">
+            <div class="">
+                <i class="fas fa-bolt me-2 bg-dark"></i>
+                <div>
+                    <h6 class="alert-heading md-0 text-dark fa-bolt-12">Start investing now!</h6>
+                    <small class="text-dark">Protected savings and investment plans</small>
+                </div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+        <h5 class="text-light md-3">CURRENCIES AND METALS</h5>
+        <div class="card card-secondary p-3 md-5 bg-secondary">
+            <div class="row md-2">
+                <div class="col-6"></div>
+                <div class="col-3 text-end text-light"><small>Sell</small></div>
+                <div class="col-3 text-end text-light"><small>Buy</small></div>
+                <div class="col-3 text-start  text-light mb-5"><small>concurence</small></div>
+            </div>
+            <div class="row align-items-center md-2 ">
+                <div class="col-6 d-flex align-items-center text-light">
+                    <i class="fas fa-dollar-sign me-2 bg-primary text-dark"></i> USD
+                </div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+            </div>
+            <div class="row align-items-center md-2">
+                <div class="col-6 d-flex align-items-center text-light">
+                    <i class="fas fa-euro-sign me-2 bg-primary text-dark"></i> EUR
+                </div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+            </div>
+            
+
+        </div>
+        <h5 class="text-secondary muted md-3"> *</h5>
+        <div class="card card-dark p-3 md-5 bg-secondary">
+            <div class="row md-2">
+                <div class="col-6"></div>
+                <div class="col-3 text-end text-light muted"><small>Sell</small></div>
+                <div class="col-3 text-end text-light muted"><small>Buy</small></div>
+                <div class="col-3 text-start  text-light muted mb-5"><small>Metals</small></div>
+            </div>
+            <div class="row align-items-center md-2 ">
+                <div class="col-6 d-flex align-items-center text-light">
+                    <i class="fas fa-dollar-sign me-2 bg-primary text-dark"></i> Gold
+                </div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+            </div>
+            <div class="row align-items-center md-2">
+                <div class="col-6 d-flex align-items-center text-light">
+                    <i class="fas fa-euro-sign me-2 bg-primary text-dark"></i> Silver
+                </div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+                <div class="col-3 text-end text-light">$ 78,92</div>
+            </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+
+</body>
+</html> 

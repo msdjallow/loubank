@@ -1,233 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LouBank </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LouBank</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: black;
-      color: #333;
+      background-color: #0d0d0d;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
     }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: none;
-      border: 4px solid yellow;
-      box-shadow: 0 0 10px rgba(0, 204, 153, 0.4);
-      transition: transform 0.5s ease;
+    .card-custom {
+      border-radius: 20px;
+      padding: 15px;
+      background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+      color: black;
     }
-
-    .logo:hover {
-      transform: scale(1.05);
+    .card-custom-alt {
+      border-radius: 20px;
+      padding: 15px;
+      background: linear-gradient(135deg, #fff3e0, #ffecb3);
+      color: black;
     }
-
-    h1 span {
-      color: yellow;
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      background-color: #1f1f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
-    
+    .nav-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #1a1a1a;
+      padding: 10px 0;
+    }
+    .nav-bottom i {
+      font-size: 24px;
+      color: white;
+    }
+    .rounded-circle{
+        width: 70px;
+    }
   </style>
 </head>
-  <div class="container-fluid p-0">
+<body>
+<div id="navbar-container"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to top, black 0%,  100%) ;">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="ff9b50cf.jpg" alt="Logo loubank" class="logo me-2">
-          <!-- <h1 class="h3 text-white m-0"><span>LOU</span>BANK</h1> -->
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav text-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Profil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cards.html">Ma carte & Historique</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="page08.html">Budget</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="page1.html">Transfert & paiement</a>
-            </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="page 10 11.html">Chatbot</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+<div class="container py-4">
+  <div class="d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-2">
+      <img src="woman-2604283_1280.jpg" class="rounded-circle" alt="profile">
+      <h5 class="m-0">Lou<span class="text-warning">Bank</span></h5>
+    </div>
+    <i class="bi bi-search text-white"></i>
   </div>
 
-    <div class="container pt-5 pb-5 mb-5"> <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
-            
-        </div>
+  <h2 class="my-4">$ 7,896</h2>
 
-        <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
-            <div class="col">
-                <div class="card card-light-green bg-primary">
-                    <div class="card-body">
-                        <small class="text-muted">VISA</small>
-                        <h5 class="card-title">Salary</h5>
-                        <p class="card-text fw-bold">$ 2,230</p>
-                        <small class="text-muted">** 6917</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-light-yellow bg-warning">
-                    <div class="card-body">
-                        <small class="text-muted">VISA</small>
-                        <h5 class="card-title">Savings account</h5>
-                        <p class="card-text fw-bold">$ 5,566</p>
-                        <small class="text-muted">** 4552</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                </div>
-        </div>
-
-        <h5 class="text-light md-3">FINANCE</h5>
-        <div class="row row-cols-3 g-3 md-4 text-center">
-            <div class="col">
-                <div class="card card-dark p-3 bg-dark muted text-light ">
-                    <i class="fas fa-star fa-2x mb-2 bg-warning w-25 mx-auto"></i>
-                    <small>My bonuses</small>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-dark p-3 bg-dark muted text-light">
-                    <i class="fas fa-chart-pie fa-2x mb-2 bg-primary w-25 mx-auto"></i>
-                    <small>My budget</small>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-dark p-3 bg-dark muted text-light">
-                    <i class="fas fa-chart-line fa-2x md-2 bg-secondary w-25 mx-auto"></i>
-                    <small>Finance analysis</small>
-                </div>
-            </div>
-        </div>
-
-        <h5 class="text-light mb-3">CURRENT LOANS</h5>
-        <div class="card card-dark mb-3 bg-dark muted">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2 text-light ">
-                    <div>
-                        <i class="fas fa-clipboard fa-lg me-2 bg-primary"></i>
-                        <span>Account N° 3874825</span>
-                    </div>
-                    <span>$ 78,92</span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-secondary muted">Expires 12/22/2023</small>
-                    <small class="text-secondary muted">Rate 3.5%</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-info d-flex align-items-center justify-content-between md-4 p-3" role="alert" style="background-color: rgb(55, 55, 230); border-color: rgb(55, 55, 230) ; color: white;">
-            <div class="">
-                <i class="fas fa-bolt me-2 bg-dark"></i>
-                <div>
-                    <h6 class="alert-heading md-0 text-dark fa-bolt-12">Start investing now!</h6>
-                    <small class="text-dark">Protected savings and investment plans</small>
-                </div>
-            </div>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-
-
-        <h5 class="text-light md-3">CURRENCIES AND METALS</h5>
-        <div class="card card-secondary p-3 md-5 bg-secondary">
-            <div class="row md-2">
-                <div class="col-6"></div>
-                <div class="col-3 text-end text-light"><small>Sell</small></div>
-                <div class="col-3 text-end text-light"><small>Buy</small></div>
-                <div class="col-3 text-start  text-light mb-5"><small>concurence</small></div>
-            </div>
-            <div class="row align-items-center md-2 ">
-                <div class="col-6 d-flex align-items-center text-light">
-                    <i class="fas fa-dollar-sign me-2 bg-primary text-dark"></i> USD
-                </div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-            </div>
-            <div class="row align-items-center md-2">
-                <div class="col-6 d-flex align-items-center text-light">
-                    <i class="fas fa-euro-sign me-2 bg-primary text-dark"></i> EUR
-                </div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-            </div>
-            
-
-        </div>
-        <h5 class="text-secondary muted md-3"> *</h5>
-        <div class="card card-dark p-3 md-5 bg-secondary">
-            <div class="row md-2">
-                <div class="col-6"></div>
-                <div class="col-3 text-end text-light muted"><small>Sell</small></div>
-                <div class="col-3 text-end text-light muted"><small>Buy</small></div>
-                <div class="col-3 text-start  text-light muted mb-5"><small>Metals</small></div>
-            </div>
-            <div class="row align-items-center md-2 ">
-                <div class="col-6 d-flex align-items-center text-light">
-                    <i class="fas fa-dollar-sign me-2 bg-primary text-dark"></i> Gold
-                </div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-            </div>
-            <div class="row align-items-center md-2">
-                <div class="col-6 d-flex align-items-center text-light">
-                    <i class="fas fa-euro-sign me-2 bg-primary text-dark"></i> Silver
-                </div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-                <div class="col-3 text-end text-light">$ 78,92</div>
-            </div>
-
+  <div class="row g-3">
+    <div class="col-6">
+      <div class="card-custom">
+        <p class="mb-1">Salary</p>
+        <h5>$ 2,230</h5>
+        <small>** 6917</small>
+      </div>
     </div>
+    <div class="col-6">
+      <div class="card-custom-alt">
+        <p class="mb-1">Savings account</p>
+        <h5>$ 5,566</h5>
+        <small>** 4552</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between text-center mt-4">
+    <div>
+      <div class="icon-box mb-2"><i class="bi bi-star"></i></div>
+      <small>My bonuses</small>
+    </div>
+    <div>
+      <div class="icon-box mb-2"><i class="bi bi-wallet"></i></div>
+      <small>My budget</small>
+    </div>
+    <div>
+      <div class="icon-box mb-2"><i class="bi bi-graph-up"></i></div>
+      <small>Finance</small>
+    </div>
+    <div>
+      <div class="icon-box mb-2"><i class="bi bi-three-dots"></i></div>
+      <small>More</small>
+    </div>
+  </div>
+
+  <h6 class="mt-4">CURRENT LOANS</h6>
+  <div class="bg-dark rounded-4 p-3 mb-2">
+    <div class="d-flex justify-content-between">
+      <div>
+        <strong>Account N° 3874825</strong>
+        <p class="mb-1">Expires 12/22/2023</p>
+      </div>
+      <div class="text-end">
+        <h6>$ 78.92</h6>
+        <small>Rate 3.5%</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-secondary rounded-4 p-3 mb-3 text-dark">
+    <strong>Start investing now!</strong>
+    <p class="mb-0">Protected savings and investment plans</p>
+  </div>
+
+  <h6>CURRENCIES AND METALS</h6>
+  <table class="table table-dark table-borderless">
+    <thead>
+      <tr>
+        <th>Currency</th>
+        <th>Buy</th>
+        <th>Sell</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>$ USD</td>
+        <td>$ 78.92</td>
+        <td>$ 78.92</td>
+      </tr>
+      <tr>
+        <td>€ EUR</td>
+        <td>$ 78.92</td>
+        <td>$ 78.92</td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th>Metals</th>
+        <th>Buy</th>
+        <th>Sell</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gold</td>
+        <td>$ 78.92</td>
+        <td>$ 78.92</td>
+      </tr>
+      <tr>
+        <td>Silver</td>
+        <td>$ 78.92</td>
+        <td>$ 78.92</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 
-    <!-- <nav class="navbar navbar-expand navbar-custom fixed-bottom bottom-nav">
-        <div class="container-fluid d-flex justify-content-around">
-            <a class="nav-link text-primary active" href="#">
-                <i class="fas fa-home fa-lg d-block text-center md-1"></i>
-                 <small>Home</small>
-            </a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-shopping-bag fa-lg d-block text-center md-1"></i>
-                <small>Purchases</small>
-            </a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-credit-card fa-lg d-block text-center md-1"></i>
-                <small>Cards</small>
-            </a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-comment-dots fa-lg d-block text-center md-1"></i>
-                <small>Chat</small>
-            </a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-cog fa-lg d-block text-center md-1"></i>
-                <small>Settings</small>
-            </a>
-        </div>
-    </nav> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    });
+</script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-</html> 
+</html>

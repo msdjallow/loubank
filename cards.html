@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="cards.css" />
 </head>
 <body class="bg-dark text-light">
+  <div id="navbar-container"></div>
 
   <div class="container py-5">
 
     <!-- Carte Bancaire -->
     <div class="row mb-4">
-      <div class="col-md-6 mx-auto">
+      <div class="col-md-10 mx-auto">
         <h3 class="mb-3">Your Card</h3>
         <div class="card bg-warning text-dark rounded-4 shadow-lg p-4">
           <div class="d-flex justify-content-between align-items-center mb-2">
@@ -30,7 +31,7 @@
 
     <!-- Transactions -->
     <div class="row">
-      <div class="col-md-6 mx-auto">
+      <div class="col-md-10 mx-auto">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h4>Transactions</h4>
           <button class="btn btn-outline-light btn-sm">Filter ▾</button>
@@ -145,6 +146,12 @@
   modal.addEventListener('hidden.bs.modal', () => {
     document.body.classList.remove('blurred');
   });
+
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    });
 </script>
 
   <!-- Bootstrap JS -->

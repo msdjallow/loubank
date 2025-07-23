@@ -46,6 +46,7 @@
   </style>
 </head>
 <body>
+  <div id="navbar-container"></div>
   <div class="container py-4">
     <!-- Header -->
     <div class="text-center mb-4">
@@ -80,7 +81,10 @@
         <div class="d-flex align-items-center gap-2">
           <img src="https://randomuser.me/api/portraits/women/1.jpg" class="contact-img" alt="">
           <div>
-            <div class="fw-bold text-white">Jeniffer</div>
+            <div class="fw-bold text-white">
+              <a href="page07.html" class="text-white text-decoration-none">Jeniffer</a>
+            </div>
+
             <small class="text-light">Hi! I return the debt</small>
           </div>
         </div>
@@ -91,7 +95,10 @@
         <div class="d-flex align-items-center gap-2">
           <img src="https://randomuser.me/api/portraits/men/1.jpg" class="contact-img" alt="">
           <div>
-            <div class="fw-bold text-white">John Baldwin</div>
+            <div class="fw-bold text-white">
+              <a href="page07.html" class="text-white text-decoration-none">John Baldwin</a>
+            </div>
+
             <small class="text-light">Thanks!</small>
           </div>
         </div>
@@ -102,7 +109,10 @@
         <div class="d-flex align-items-center gap-2">
           <img src="https://randomuser.me/api/portraits/women/2.jpg" class="contact-img" alt="">
           <div>
-            <div class="fw-bold text-white">Maya 👋</div>
+            <div class="fw-bold text-white">
+              <a href="page07.html" class="text-white text-decoration-none">Maya</a>
+            </div>
+
             <small class="text-light">Transfer</small>
           </div>
         </div>
@@ -113,7 +123,10 @@
         <div class="d-flex align-items-center gap-2">
           <img src="https://randomuser.me/api/portraits/women/3.jpg" class="contact-img" alt="">
           <div>
-            <div class="fw-bold text-white">Sister Alice 🌸</div>
+            <div class="fw-bold text-white">
+              <a href="page07.html" class="text-white text-decoration-none">Sister Alice</a>
+            </div>
+
             <small class="text-light">Hi! I return the debt</small>
           </div>
         </div>
@@ -132,5 +145,14 @@
       </div>
     </div>
   </div>
+
+  <script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    });
+</script>
+
 </body>
 </html>

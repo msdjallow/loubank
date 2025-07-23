@@ -9,14 +9,16 @@
 </head>
 
 <body class="bg-dark text-white">
+  <div id="navbar-container"></div>
 
   <div class="container-fluid py-4 px-5">
 
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <button class="btn btn-sm btn-outline-light">&larr;</button>
+      <a href="page6.html" class="btn btn-sm btn-outline-light">&larr;</a>
       <h4 class="text-center flex-grow-1 mb-0">My budget</h4>
     </div>
+
 
     <!-- Balance Info -->
     <div class="bg-black rounded p-4 mb-4">
@@ -135,6 +137,15 @@
     <div id="transaction-list"></div>
 
   </div>
+
+  <script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    });
+</script>
+
 
 </body>
 </html>
