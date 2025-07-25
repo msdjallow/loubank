@@ -1,37 +1,35 @@
-<!-- navbar.html -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="loubank logo.jpeg" alt="Logo loubank" class="logo me-2"
-           style="width: 130px; height: 80px; border: 3px solid yellow; box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0d0d0d;">
+  <div class="container justify-content-between">
+    
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="loubank logo.jpeg" alt="Logo" height="60" width="100" class="logo" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav text-center">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">Profil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="cards.html">Ma carte</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="page08.html">Budget</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="page1.html">Transfert</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="page 10 11.html">Chatbot</a>
-        </li>
+
+    <!-- Icônes + Connexion (centrés) -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarIcons">
+      <ul class="navbar-nav gap-4 text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door fs-4"></i>Acceuil</a></li>
+        <li class="nav-item"><a class="nav-link" href="cards.html"><i class="bi bi-credit-card fs-4"></i>Ma carte</a></li>
+        <li class="nav-item"><a class="nav-link" href="page08.html"><i class="bi bi-pie-chart fs-4"></i>Budget</a></li>
+        <li class="nav-item"><a class="nav-link" href="page1.html"><i class="bi bi-arrow-left-right fs-4"></i>Transfer</a></li>
+        <li class="nav-item"><a class="nav-link" href="page 10 11.html"><i class="bi bi-robot fs-4"></i>Chatbot</a></li>
       </ul>
+    </div>
 
-      <div class="ms-lg-3 mt-2 mt-lg-0">
-        <a href="page9.html" class="btn btn-warning fw-bold">Connexion</a>
-      </div>
+    <!-- Connexion -->
+    <div>
+      <a href="page9.html"><button class="btn btn-outline-light ms-2">Se Deconnecter</button></a>
     </div>
   </div>
 </nav>
+
+<!-- NAVBAR BOTTOM POUR MOBILE -->
+<div class="mobile-bottom-nav d-lg-none">
+  <a href="index.html" class="nav-icon"><i class="bi bi-house-door"></i></a>
+  <a href="cards.html" class="nav-icon"><i class="bi bi-credit-card"></i></a>
+  <a href="page08.html" class="nav-icon"><i class="bi bi-pie-chart"></i></a>
+  <a href="page1.html" class="nav-icon"><i class="bi bi-arrow-left-right"></i></a>
+  <a href="page 10 11.html" class="nav-icon"><i class="bi bi-robot"></i></a>
+</div>

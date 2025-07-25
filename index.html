@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LouBank</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
@@ -13,6 +16,7 @@
       color: white;
       font-family: 'Segoe UI', sans-serif;
       padding-top: 90px; /* espace pour compenser la navbar fixée */
+      padding-bottom: 70px; /* espace pour compenser la navbar mobile en bas */
     }
 
     .card-custom {
@@ -41,41 +45,74 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: #1a1a1a;
+      background-color: #0d0d0d;
       padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #222;
+      z-index: 1030;
     }
     .nav-bottom i {
       font-size: 24px;
       color: white;
     }
+    .nav-bottom a {
+      color: white;
+      text-decoration: none;
+    }
+    .nav-bottom a:hover i {
+      color: #f9f871;
+    }
     .rounded-circle {
       width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
     }
 
     /* Correction : menu mobile ne masque pas le contenu */
     @media (max-width: 991px) {
-      #navbarNav.collapse.show {
+      #navbarIcons.collapse.show {
         position: relative !important;
         background-color: #0d0d0d;
         padding: 1rem;
         box-shadow: none !important;
       }
     }
+
+    /* Pour que l'icône étoile soit jaune */
+    .icon-box .bi-star {
+      color: #f9f871;
+    }
+
+    /* Pour enlever le bleu des icônes liées (wallet, graph), on force la couleur blanche */
+    .icon-box a .bi-wallet,
+    .icon-box a .bi-graph-up {
+      color: white !important;
+    }
+
+    /* Conteneur du profil (photo + texte) centré verticalement et horizontalement */
+    .profile-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* si tu veux centrer horizontalement aussi */
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
   </style>
 </head>
 <body>
-  <div id="navbar-container"></div>
+  <!-- NAVBAR FIXE EN HAUT -->
+  <div id="navbar-container" style="min-height: 80px;"></div>
 
   <div class="container py-4">
-    <div class="d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center gap-2">
-        <img src="woman-2604283_1280.jpg" class="rounded-circle" alt="profile" />
-        <h5 class="m-0">Lou<span class="text-warning">Bank</span></h5>
-      </div>
-      <i class="bi bi-search text-white"></i>
+    <div class="profile-container">
+      <img src="woman-2604283_1280.jpg" class="rounded-circle" alt="profile" />
+      <h5 class="m-0">Lou<span class="text-warning">Bank</span></h5>
     </div>
 
-    <h2 class="my-4">$ 7,896</h2>
 
     <div class="row g-3">
       <div class="col-6">
@@ -179,15 +216,59 @@
     </table>
   </div>
 
+  <!-- NAVBAR MOBILE EN BAS AVEC ICÔNES -->
+  <div class="nav-bottom d-lg-none">
+    <a href="index.html"><i class="bi bi-house-door"></i></a>
+    <a href="cards.html"><i class="bi bi-credit-card"></i></a>
+    <a href="page08.html"><i class="bi bi-pie-chart"></i></a>
+    <a href="page1.html"><i class="bi bi-arrow-left-right"></i></a>
+    <a href="page 10 11.html"><i class="bi bi-robot"></i></a>
+  </div>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    // Charger la navbar depuis le fichier navbar.html
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
-        // Ne rien faire de spécial, Bootstrap gère le toggle automatiquement
+
+        // Forcer style navbar sombre
+        const navbar = document.querySelector('#navbar-container .navbar');
+        if (navbar) {
+          navbar.style.backgroundColor = '#0d0d0d';
+          navbar.style.borderBottom = '1px solid #222';
+        }
+
+        // Cacher bouton hamburger sur mobile (max-width 991px)
+        const hamburgerBtn = document.querySelector('.navbar-toggler');
+        function toggleHamburgerVisibility() {
+          if (window.innerWidth <= 991) {
+            if (hamburgerBtn) hamburgerBtn.style.display = 'none';
+          } else {
+            if (hamburgerBtn) hamburgerBtn.style.display = 'block';
+          }
+        }
+        toggleHamburgerVisibility();
+        window.addEventListener('resize', toggleHamburgerVisibility);
+
+        // Activer le menu hamburger (sur desktop/tablette)
+        const navbarToggle = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarIcons');
+
+        if (navbarToggle && navbarCollapse) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+          navbarToggle.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+              bsCollapse.hide();
+            } else {
+              bsCollapse.show();
+            }
+          });
+        }
       });
   </script>
 </body>
